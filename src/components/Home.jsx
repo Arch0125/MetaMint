@@ -1,5 +1,7 @@
 import WalletBalance from './WalletBalance';
 import { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import './Home.css'
 import { ethers } from 'ethers';
 import FiredGuys from '../artifacts/contracts/MyNFT.sol/FiredGuys.json';
@@ -82,8 +84,7 @@ function NFTImage({ tokenId, getCount }) {
     alert(uri);
   }
   return (
-      <div className='main'>
-    <div className="card">
+    <div className="card" style={{ width: '18rem' }}>
       <img className="cardimg" src={isMinted ? imageURI : 'img/placeholder.png'}></img>
       <div className="card-body">
         <h5 className="card-title">ID #{tokenId}</h5>
@@ -97,7 +98,6 @@ function NFTImage({ tokenId, getCount }) {
           </button>
         )}
       </div>
-    </div>
     </div>
   );
 }
