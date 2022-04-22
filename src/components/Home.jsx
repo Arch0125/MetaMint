@@ -6,6 +6,7 @@ import './Home.css'
 import { ethers } from 'ethers';
 import FiredGuys from '../artifacts/contracts/MyNFT.sol/FiredGuys.json';
 import { PocketProvider } from '@ethersproject/providers';
+import Payment from './Payment';
 
 const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 
@@ -21,7 +22,7 @@ const contract = new ethers.Contract(contractAddress, FiredGuys.abi, signer);
 function Home() {
 
   const [totalMinted, setTotalMinted] = useState(0);
-  const [owner,setOwner] = useState('');
+  const [ipfsadd,setIpfsadd] = useState('');
   useEffect(() => {
     getCount();
   }, []);
@@ -46,6 +47,7 @@ function Home() {
                         <h4>Current Subscription Fees : 0.05 ETH</h4>
                         <br/>
                         <button className='button'>Support my Artwork 🪙</button>
+                        <Payment/>
                     </div>
                 </div>
             </div>
@@ -68,6 +70,8 @@ function Home() {
     </div>
   );
 }
+
+
 
 function NFTImage({ tokenId, getCount }) {
   const contentId = 'QmTBxFm3SU3pmWQgGzb2ApZe9oMD6amZCAkyVa6HyvMDxB';
