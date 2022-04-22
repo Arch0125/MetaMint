@@ -47,7 +47,6 @@ function Home() {
                         <h4>Current Subscription Fees : 0.05 ETH</h4>
                         <br/>
                         <button className='button'>Support my Artwork 🪙</button>
-                        <Payment/>
                     </div>
                 </div>
             </div>

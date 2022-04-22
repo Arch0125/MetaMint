@@ -1,0 +1,21 @@
+.bg{
+    background-color: rgb(41, 0, 70);
+    color: aliceblue;
+    height: 100vh;
+    padding-left: 60px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.title{
+    font-size: 8vmin;
+}
+
+.desc{
+    font-size: 5vmin;
+}
+
+.img{
+    padding-top: 50px;
+}
