@@ -40,6 +40,8 @@ function Home() {
                     </div>
                     <div className='col'>
                         <h1>Fired Guys NFT Collection</h1>
+                        <h4>NFTs Minted : {totalMinted}</h4>
+                        <h4>Current Subscription Fees : 0.05 ETH</h4>
                     </div>
                 </div>
             </div>
