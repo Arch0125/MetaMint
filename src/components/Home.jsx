@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import './Home.css'
 import { ethers } from 'ethers';
 import FiredGuys from '../artifacts/contracts/MyNFT.sol/FiredGuys.json';
+import { PocketProvider } from '@ethersproject/providers';
 
 const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 
@@ -20,6 +21,7 @@ const contract = new ethers.Contract(contractAddress, FiredGuys.abi, signer);
 function Home() {
 
   const [totalMinted, setTotalMinted] = useState(0);
+  const [owner,setOwner] = useState('');
   useEffect(() => {
     getCount();
   }, []);
@@ -42,6 +44,8 @@ function Home() {
                         <h1>Fired Guys NFT Collection</h1>
                         <h4>NFTs Minted : {totalMinted}</h4>
                         <h4>Current Subscription Fees : 0.05 ETH</h4>
+                        <br/>
+                        <button className='button'>Support my Artwork 🪙</button>
                     </div>
                 </div>
             </div>

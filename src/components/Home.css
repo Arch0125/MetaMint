@@ -41,7 +41,7 @@
 .button {
     position: relative;
     display: inline-block;
-    margin: 15px;
+    margin-top: 15px;
     padding: 10px 20px;
     text-align: center;
     font-size: 15px;
