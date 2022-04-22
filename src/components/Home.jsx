@@ -31,10 +31,23 @@ function Home() {
   };
 
   return (
-    <div>
-      <WalletBalance />
-
-      <h1>Fired Guys NFT Collection</h1>
+    <div >
+        <div className='header'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-4'>
+                        <img className='headimg' src='../../img/0.png' />
+                    </div>
+                    <div className='col'>
+                        <h1>Fired Guys NFT Collection</h1>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+      
+      <label>{totalMinted}</label>
       <div className="container">
         <div className="row">
           {Array(totalMinted + 1)
@@ -89,12 +102,12 @@ function NFTImage({ tokenId, getCount }) {
       <div className="card-body">
         <h5 className="card-title">ID #{tokenId}</h5>
         {!isMinted ? (
-          <button className="btn btn-primary" onClick={mintToken}>
-            Mint
+          <button className="button" onClick={mintToken}>
+            ⛏️ Mint
           </button>
         ) : (
-          <button className="btn btn-secondary" onClick={getURI}>
-            Taken! Show URI
+          <button className="button" onClick={getURI}>
+            🔒 Taken! Show URI
           </button>
         )}
       </div>
