@@ -1,0 +1,17 @@
+.body{
+    background-color: blueviolet;
+    height: 50vh;
+    padding-left: 200px;
+    padding-top: 250px;
+}
+
+/* From uiverse.io by @adamgiebl */
+.upcard {
+    width: 85%;
+    height: fit-content;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+   }

@@ -1,4 +1,5 @@
 import "./styles.css";
+import Upload from "./Upload";
 
 export default function Intro() {
   return (
@@ -27,7 +28,6 @@ export default function Intro() {
       <p class="feature">
         💸 Allow subscribers to mint and re-sell{" "}
       </p>
-
       <div id="container">
         <h1 class="header2">
           Let's get <span class="purpletext"> started </span>{" "}
