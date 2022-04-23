@@ -92,10 +92,10 @@ function Home() {
 function NFTImage({ tokenId, getCount, fee, cid }) {
 
     const getcid = cid
-  const contentId = 'QmTBxFm3SU3pmWQgGzb2ApZe9oMD6amZCAkyVa6HyvMDxB';
+  const contentId = cid;
   const metadataURI = `${cid}/${tokenId}.json`;
-  //const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
-    const imageURI = `img/${tokenId}.png`;
+  const imageURI = `https://infura-ipfs.io/ipfs/${contentId}/${tokenId}.png`;
+    //const imageURI = `img/${tokenId}.png`;
 
   const [isMinted, setIsMinted] = useState(false);
   useEffect(() => {
