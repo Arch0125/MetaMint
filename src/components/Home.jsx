@@ -24,6 +24,7 @@ function Home() {
   const [totalMinted, setTotalMinted] = useState(0);
   const [contID,setContID] = useState('QmTBxFm3SU3pmWQgGzb2ApZe9oMD6amZCAkyVa6HyvMDxB');
   const[subs,setSubs]=useState('0.05');
+  const[name,setName]=useState('Fired Guys NFT Collection');
   useEffect(() => {
     getCount();
   }, []);
@@ -40,10 +41,10 @@ function Home() {
             <div className='container'>
                 <div className='row'>
                     <div className='col-4'>
-                        <img className='headimg' src='../../img/0.png' />
+                        <img className='headimg' src='https://images.assetsdelivery.com/compings_v2/emojoez/emojoez2105/emojoez210500002.jpg' width="200px" />
                     </div>
                     <div className='col'>
-                        <h1>Fired Guys NFT Collection</h1>
+                        <h1>{name}</h1>
                         <h4>NFTs Minted : {totalMinted}</h4>
                         <h4>Current Subscription Fees : 0.05 ETH</h4>
                         <br/>
@@ -58,14 +59,16 @@ function Home() {
             <div className='container'>
                 <div className='row'>
                     <div className='col'>
-                        <h1>Manage Subscriptions</h1>
+                        <h1>Manage your NFTs</h1>
                         <h4>Current Subscription Fees : {subs} ETH</h4>
+                        <input className='txtinput' type='text' placeholder='NFT Project Name' onChange={e => setName(e.target.value)} />
                         <br/>
                         <input className='txtinput' type='text' placeholder='Update Project CID' onChange={e => setContID(e.target.value)} /><label className='helper'>This will update your NFT collection</label>
                         <br/>
                         <input className='txtinput' type='text' placeholder='Update Subscription fees' onChange={e => setSubs(e.target.value)} /><label className='helper'>This will update subscription fee for evry NFT</label>
                     </div>
                 </div>
+                <button className='pgbutton'>Create Custom page</button>
             </div>
         
         

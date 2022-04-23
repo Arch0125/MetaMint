@@ -106,3 +106,20 @@
    .helper{
        margin-left: 10px;
    }
+
+   .pgbutton{
+       padding: 5px;
+       font-size: medium;
+       border-width: 2px;
+       border-color: #725AC1;
+       border-style: solid;
+       border-radius: 10px;
+       background-color: white;
+       color: #725AC1;
+       margin-top: 20px;
+   }
+
+   .pgbutton:hover{
+       color: white;
+       background-color: #725AC1;
+   }
