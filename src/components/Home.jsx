@@ -22,7 +22,8 @@ const contract = new ethers.Contract(contractAddress, FiredGuys.abi, signer);
 function Home() {
 
   const [totalMinted, setTotalMinted] = useState(0);
-  const [ipfsadd,setIpfsadd] = useState('');
+  const [contID,setContID] = useState('QmTBxFm3SU3pmWQgGzb2ApZe9oMD6amZCAkyVa6HyvMDxB');
+  const [subs,setSubs] = useState('');
   useEffect(() => {
     getCount();
   }, []);
@@ -73,6 +74,7 @@ function Home() {
 
 
 function NFTImage({ tokenId, getCount }) {
+
   const contentId = 'QmTBxFm3SU3pmWQgGzb2ApZe9oMD6amZCAkyVa6HyvMDxB';
   const metadataURI = `${contentId}/${tokenId}.json`;
   // const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
@@ -106,6 +108,7 @@ function NFTImage({ tokenId, getCount }) {
     alert(uri);
   }
   return (
+      
     <div className="card" style={{ width: '18rem' }}>
       <img className="cardimg" src={isMinted ? imageURI : 'img/placeholder.png'}></img>
       <div className="card-body">
@@ -115,9 +118,12 @@ function NFTImage({ tokenId, getCount }) {
             ⛏️ Mint
           </button>
         ) : (
-          <button className="hbutton" onClick={getURI}>
+            <div>
+                <button className="hbutton" onClick={getURI}>
             🔒 Taken! Show URI
           </button>
+            </div>
+          
         )}
       </div>
     </div>

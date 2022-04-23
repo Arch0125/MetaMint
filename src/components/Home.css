@@ -85,3 +85,12 @@
    .header:hover {
     box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
    }
+
+   .txtinput{
+       width: 500px;
+       padding: 7px;
+       border-radius: 5px;
+       border-style: solid;
+       border-width: 1px;
+       margin-top: 10px;
+   }
