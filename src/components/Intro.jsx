@@ -32,12 +32,12 @@ export default function Intro() {
         <h1 class="header2">
           Let's get <span class="purpletext"> started </span>{" "}
         </h1>
-        <button class="button" type="button">
+        <a href='/Upload'><button class="button" type="button">
           Upload NFT project
-        </button>
-        <button class="button" type="button">
+        </button></a>
+        <a href="/Mint"><button class="button" type="button">
           Create Subscriptions
-        </button>
+        </button></a>
       </div>
 
       <div id="container1">

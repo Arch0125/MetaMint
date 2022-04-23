@@ -38,7 +38,7 @@
 }
 
 /* From uiverse.io by @adamgiebl */
-.button {
+.hbutton {
     position: relative;
     display: inline-block;
     margin-top: 15px;
@@ -57,12 +57,12 @@
     box-shadow: inset 0 0 0 0 #725AC1;
    }
    
-   .button:hover {
+   .hbutton:hover {
     color: white;
     box-shadow: inset 0 -100px 0 0 #725AC1;
    }
    
-   .button:active {
+   .hbutton:active {
     transform: scale(0.9);
    }
 

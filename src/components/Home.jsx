@@ -111,11 +111,11 @@ function NFTImage({ tokenId, getCount }) {
       <div className="card-body">
         <h5 className="card-title">ID #{tokenId}</h5>
         {!isMinted ? (
-          <button className="button" onClick={mintToken}>
+          <button className="hbutton" onClick={mintToken}>
             ⛏️ Mint
           </button>
         ) : (
-          <button className="button" onClick={getURI}>
+          <button className="hbutton" onClick={getURI}>
             🔒 Taken! Show URI
           </button>
         )}
