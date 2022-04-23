@@ -32,7 +32,9 @@ function Home() {
     const count = await contract.count();
     console.log(parseInt(count));
     setTotalMinted(parseInt(count));
+    const cid = contID;
   };
+  
 
   return (
     <div >
@@ -47,7 +49,8 @@ function Home() {
                         <h4>NFTs Minted : {totalMinted}</h4>
                         <h4>Current Subscription Fees : 0.05 ETH</h4>
                         <br/>
-                        <button className='button'>Support my Artwork 🪙</button>
+                        <a href='/Payment' ><button className='button'>Support my Artwork 🪙</button></a>
+                        <input type='text' onChange={e => setContID(e.target.value)} />
                     </div>
                 </div>
             </div>

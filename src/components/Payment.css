@@ -1,0 +1,44 @@
+/* From uiverse.io by @Sujitkavaiya */
+.paycard {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+   }
+   
+   .paycard:hover {
+    border: #006fff 0.2em solid;
+   }
+
+   .hbutton {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 30px;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
+    margin-left: 20px;
+   }
+   
+   .hbutton:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+   }
+   
+   .hbutton:active {
+    transform: scale(0.9);
+   }

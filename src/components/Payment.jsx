@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ethers } from "ethers";
-
+import './Payment.css'
 const startPayment = async ({ setError, setTxs, ether, addr }) => {
   try {
     if (!window.ethereum)
@@ -40,7 +40,7 @@ export default function Payment() {
 
   return (
     <form className="m-4" onSubmit={handleSubmit}>
-      <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
+      <div className="paycard">
         <main className="mt-4 p-4">
           <h1 className="text-xl font-semibold text-gray-700 text-center">
             Send ETH payment
@@ -67,10 +67,13 @@ export default function Payment() {
         <footer className="p-4">
           <button
             type="submit"
-            className="btn btn-primary submit-button focus:ring focus:outline-none w-full"
+            className="hbutton"
           >
             Pay now
           </button>
+          <a src='/Mint'><button
+            className="hbutton"
+          >Go Back</button></a>
         </footer>
       </div>
     </form>
