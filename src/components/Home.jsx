@@ -23,7 +23,7 @@ function Home() {
 
   const [totalMinted, setTotalMinted] = useState(0);
   const [contID,setContID] = useState('QmTBxFm3SU3pmWQgGzb2ApZe9oMD6amZCAkyVa6HyvMDxB');
-  const [subs,setSubs] = useState('');
+  const[subs,setSubs]=useState('0.05');
   useEffect(() => {
     getCount();
   }, []);
@@ -32,9 +32,7 @@ function Home() {
     const count = await contract.count();
     console.log(parseInt(count));
     setTotalMinted(parseInt(count));
-    const cid = contID;
   };
-  
 
   return (
     <div >
@@ -50,22 +48,37 @@ function Home() {
                         <h4>Current Subscription Fees : 0.05 ETH</h4>
                         <br/>
                         <a href='/Payment' ><button className='button'>Support my Artwork 🪙</button></a>
-                        <input type='text' onChange={e => setContID(e.target.value)} />
                     </div>
                 </div>
             </div>
         
         
         </div>
-      
-      <label>{totalMinted}</label>
+        <div className='header'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col'>
+                        <h1>Manage Subscriptions</h1>
+                        <h4>Current Subscription Fees : {subs} ETH</h4>
+                        <br/>
+                        <input className='txtinput' type='text' placeholder='Update Project CID' onChange={e => setContID(e.target.value)} />
+                        <br/>
+                        <input className='txtinput' type='text' placeholder='Update Subscription fees' onChange={e => setSubs(e.target.value)} />
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+      <br/>
+      <br/>
       <div className="container">
         <div className="row">
           {Array(totalMinted + 1)
             .fill(0)
             .map((_, i) => (
               <div key={i} className="col-sm">
-                <NFTImage tokenId={i} getCount={getCount} />
+                <NFTImage tokenId={i} getCount={getCount} fee={subs} cid={contID}/>
               </div>
             ))}
         </div>
@@ -76,11 +89,12 @@ function Home() {
 
 
 
-function NFTImage({ tokenId, getCount }) {
+function NFTImage({ tokenId, getCount, fee, cid }) {
 
+    const getcid = cid
   const contentId = 'QmTBxFm3SU3pmWQgGzb2ApZe9oMD6amZCAkyVa6HyvMDxB';
-  const metadataURI = `${contentId}/${tokenId}.json`;
-  // const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
+  const metadataURI = `${cid}/${tokenId}.json`;
+  //const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
     const imageURI = `img/${tokenId}.png`;
 
   const [isMinted, setIsMinted] = useState(false);
@@ -98,7 +112,7 @@ function NFTImage({ tokenId, getCount }) {
     const connection = contract.connect(signer);
     const addr = connection.address;
     const result = await contract.payToMint(addr, metadataURI, {
-      value: ethers.utils.parseEther('0.05'),
+      value: ethers.utils.parseEther(fee),
     });
 
     await result.wait();
