@@ -4,7 +4,7 @@ import './Upload.css'
 function Upload() {
     return ( 
     <div className='body'>
-        <p className='title'>Step 1 : Harness the power of Decentralized Storage</p>
+        <p className='title'>Harness the power of Decentralized Storage</p>
         <div className='upcard'>
             <h3>Upload NFT to IPFS</h3>
             <p>MetaMint supports uploading a complete folder full of images</p>

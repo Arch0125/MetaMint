@@ -61,9 +61,9 @@ function Home() {
                         <h1>Manage Subscriptions</h1>
                         <h4>Current Subscription Fees : {subs} ETH</h4>
                         <br/>
-                        <input className='txtinput' type='text' placeholder='Update Project CID' onChange={e => setContID(e.target.value)} />
+                        <input className='txtinput' type='text' placeholder='Update Project CID' onChange={e => setContID(e.target.value)} /><label className='helper'>This will update your NFT collection</label>
                         <br/>
-                        <input className='txtinput' type='text' placeholder='Update Subscription fees' onChange={e => setSubs(e.target.value)} />
+                        <input className='txtinput' type='text' placeholder='Update Subscription fees' onChange={e => setSubs(e.target.value)} /><label className='helper'>This will update subscription fee for evry NFT</label>
                     </div>
                 </div>
             </div>
